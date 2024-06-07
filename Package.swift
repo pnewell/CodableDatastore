@@ -27,17 +27,11 @@ let package = Package(
             dependencies: [
                 "AsyncSequenceReader",
                 "Bytes"
-            ],
-            swiftSettings: [
-                .enableExperimentalFeature("StrictConcurrency")
             ]
         ),
         .testTarget(
             name: "CodableDatastoreTests",
-            dependencies: ["CodableDatastore"],
-            swiftSettings: [
-                .enableExperimentalFeature("StrictConcurrency")
-            ]
+            dependencies: ["CodableDatastore"]
         ),
     ]
 )
